@@ -14,3 +14,5 @@ files.each do |object, path|
     object.add(object.new(row))
   end
 end
+
+silver_plans = Plans.silver_plans
