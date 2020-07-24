@@ -11,6 +11,6 @@ files = {
 
 files.each do |object, path|
   CSV.foreach(path, headers: true, header_converters: :symbol) do |row|
-    object.new(row)
+    object.add(object.new(row))
   end
 end
