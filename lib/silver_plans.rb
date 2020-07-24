@@ -15,4 +15,7 @@ class SilverPlans
   def self.all
     @@silver_plans
   end
+
+  def self.adjust_rate()
+  end
 end
