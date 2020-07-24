@@ -16,3 +16,6 @@ files.each do |object, path|
 end
 
 silver_plans = Plans.silver_plans
+zip_codes = SilverPlans.all.map do |silver_plan|
+  ZipCodes.find_by_zip_code(silver_plan.zip_code)
+end

@@ -1,9 +1,11 @@
 class SilverPlans
   @@silver_plans = []
 
+  attr_reader :zip_code
+
   def initialize(info)
     @rate = info[:rate]
-    @zip_code = info[:zip_code]
+    @zip_code = info[:zipcode]
   end
 
   def self.add(silver_plan)

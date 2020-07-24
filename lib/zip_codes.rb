@@ -1,6 +1,8 @@
 class ZipCodes
   @@zip_codes = []
 
+  attr_reader :zip_code
+
   def initialize(info)
     @zip_code = info[:zipcode]
     @state = info[:state]
@@ -15,5 +17,9 @@ class ZipCodes
 
   def self.all
     @@zip_codes
+  end
+
+  def self.find_by_zip_code(zip_code)
+    all.find_all { |object| object.zip_code == zip_code }
   end
 end
